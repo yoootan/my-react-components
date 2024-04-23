@@ -15,7 +15,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            By{" yoootan next "}
+            By{" yoootan vercel deploy"}
             <Image
               src="/vercel.svg"
               alt="Vercel Logo"

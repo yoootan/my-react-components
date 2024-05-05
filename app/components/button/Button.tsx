@@ -39,18 +39,38 @@ export const Button = ({
     <button
       type="button"
       style={{
-        padding: "10px",
         borderRadius: 4,
-        borderWidth: 2,
+        borderWidth: 1,
         borderStyle: "solid",
         borderColor: colors.gray_200,
         cursor: "pointer",
         color: colors[color],
         backgroundColor: colors[backgroundColor],
+        ...getSizeStyle(size),
       }}
       {...props}
     >
       {label}
     </button>
   );
+};
+
+const getSizeStyle = (size: "sm" | "md" | "lg") => {
+  switch (size) {
+    case "md":
+      return {
+        fontSize: "14px",
+        padding: "10px",
+      };
+    case "lg":
+      return {
+        fontSize: "16px",
+        padding: "12px",
+      };
+    case "sm":
+      return {
+        fontSize: "12px",
+        padding: "8px",
+      };
+  }
 };

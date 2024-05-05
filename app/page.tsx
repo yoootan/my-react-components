@@ -1,5 +1,7 @@
+'use client'
 import Image from "next/image";
 import styles from "./page.module.css";
+import { Button } from "./components/button/Button";
 
 export default function Home() {
   return (
@@ -23,6 +25,11 @@ export default function Home() {
               width={100}
               height={24}
               priority
+            />
+            <Button
+              label={"text button"}
+              color={"black"}
+              backgroundColor={"primary_400"}
             />
           </a>
         </div>
